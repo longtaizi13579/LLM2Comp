@@ -9,7 +9,7 @@ This repository provides the scripts and configurations needed to train a model 
 3. **Third Stage: Supervised Contrastive Training**
 
 For further details, please refer to the paper:  
-[Bidirectional Contrastive Pre-training](https://arxiv.org/abs/2511.17129)  
+[Learning to Compress](https://arxiv.org/abs/2511.17129)  
 This paper is accepted for **AAAI'26**.
 
 ---
