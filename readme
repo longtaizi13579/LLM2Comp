@@ -1,0 +1,45 @@
+# Bidirectional Contrastive Pre-training for Llama-2-7b-chat (or other models)
+
+This repository provides the scripts and configurations needed to train a model in a bidirectional contrastive manner using Llama-2-7b-chat or other similar models. The pre-training process consists of three main stages:
+
+## Overview
+
+1. **First Stage: NLL/KL/Rc Training**  
+2. **Second Stage: Unsupervised Contrastive Training**  
+3. **Third Stage: Supervised Contrastive Training**
+
+For further details, please refer to the paper:  
+[Bidirectional Contrastive Pre-training](https://arxiv.org/abs/2511.17129)  
+This paper is accepted for **AAAI'26**.
+
+---
+
+## Training Process
+
+The pre-training process consists of three stages, and each stage can be executed sequentially as follows:
+
+### 1. First Stage: NLL/KL/Rc Training
+
+In the first stage, we perform the NLL/KL/Rc training. To start the first stage with one GPU, run the following command:
+
+bash run_first_stage_kl.sh
+
+You can modify the sequence length, task type, and other parameters by editing the arguments_first_stage.py file.
+
+### 2. Second Stage: Unsupervised Contrastive Training
+
+After completing the first stage, proceed to the second stage for unsupervised contrastive training. Run the following command with one GPU:
+
+bash run_second_stage.sh
+
+
+Parameters can be adjusted in the arguments_second_stage.py file.
+
+### 3. Third Stage: Supervised Contrastive Training
+
+In the final stage, perform the supervised contrastive training with 8 GPUs:
+
+bash run_third_stage.sh
+
+
+Make sure to adjust the total batch size, data path, and other parameters in the arguments_third_stage.py file.
