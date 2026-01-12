@@ -1,4 +1,4 @@
-# Bidirectional Contrastive Pre-training for Llama-2-7b-chat (or other models)
+# Learning to Compress: Unlocking the Potential of Large Language Models for Text Representation 
 
 This repository provides the scripts and configurations needed to train a model in a bidirectional contrastive manner using Llama-2-7b-chat or other similar models. The pre-training process consists of three main stages:
 
